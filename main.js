@@ -51,7 +51,7 @@ function dialogueprev(){
 
 
                     if (userPassword === correctPassword) {
-                        // Şifre DOĞRU ise modalı aç
+
                         modal.style.display = "flex";
                         modal.style.flexDirection = "column";
                         modal.style.justifyContent = "center";
@@ -61,32 +61,31 @@ function dialogueprev(){
                         captionText.innerHTML = this.alt;
 
                     } else if (userPassword === null) {
-                        // Kullanıcı "İptal" tuşuna bastı, hiçbir şey yapma.
+
                     } else {
-                        // Şifre YANLIŞ ise uyarı ver
+
                         alert("Hatalı şifre girdiniz! Resim görüntülenemiyor.");
                     }
                 });
             });
 
-        // Kapatma fonksiyonu
+
         function closeModal() {
             modal.style.display = "none";
         }
 
-        // X butonuna tıklanınca kapat
+
         if (closeBtn) {
            closeBtn.addEventListener('click', closeModal);
         }
 
-        // Resmin dışındaki siyah alana tıklanınca kapat
         modal.addEventListener('click', function(event) {
             if (event.target === modal) {
                 closeModal();
             }
         });
 
-        // ESC tuşuna basılınca kapat (Ekstra kolaylık)
+
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape" && modal.style.display === "flex") {
                 closeModal();
