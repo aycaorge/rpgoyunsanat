@@ -1,0 +1,204 @@
+#aboutus{
+    color: rgb(113, 56, 121);
+    text-decoration: none;
+
+}
+@keyframes myAnimation {
+    0%   {top:0px;}
+    50%  {top:50px;}
+    100% {top:0px;}
+}
+@keyframes myAnimation2 {
+    0%   {top:0px;left: -200px;}
+    50%  {top:200px;left: 1200px;}
+    99%  {top:0px;left: 1200px;}
+    100% {top:0px;left: -200px;}
+}
+#menu{
+    display: flex;
+    padding: 10px;
+    position:relative;
+    justify-content: space-between;
+}
+#navbar{
+    background-image: url(carousel.jpg);
+    background-size: cover;
+    display: flex;
+    padding: 10px;
+    position:relative;
+    justify-content: space-between;
+}
+#convo{
+    background :no-repeat center url(backg.png);
+    display: flex;
+    padding: 10px;
+    position:relative;
+    justify-content: space-between;
+}
+#convop{
+    background-color: lightcoral;
+    background-size: contain;
+    display: flex;
+    padding: 10px;
+    position:relative;
+    justify-content: center;
+}
+#galery{
+    display: flex;
+    padding: 10px;
+    position:relative;
+    justify-content: space-between;
+}
+#navbar a {
+
+
+}
+.animationmenu{
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    position:relative;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: transform 0.5s;
+    
+}
+.animation1{
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    position:relative;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: transform 0.5s;
+    
+}
+.animation1:hover{
+    transform: rotateZ(10deg) scale(2);
+    content: url(bunnyscary.png);
+    z-index: 1000;
+}
+.animation2{
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    position:relative;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: transform 0.5s;
+    animation-delay: -0.66s;
+}
+.animation2:hover{
+    transform: rotateZ(10deg) scale(2);
+    content: url(horsescary.png);
+    z-index: 1000;
+
+}
+.animation3{
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    position:relative;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: transform 0.5s;
+    animation-delay: -1.3s;
+}
+.animation3:hover{
+    transform: rotateZ(10deg) scale(2);
+    content: url(bebito2.png);
+    z-index: 1000;
+
+}
+.image-gallery {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+/* Küçük resimlerin stili */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer; /* Tıklanabilir olduğunu gösteren el işareti */
+    transition: 0.3s;
+    width: 400px; /* Örnek genişlik */
+    height: auto;
+    opacity: 0.3;
+}
+
+.myImg:hover {
+    opacity: 0.5; /* Üzerine gelince hafif şeffaflaşma efekti */
+}
+
+/* --- Modal (Arka Plan) Stilleri --- */
+.modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed; /* Sayfada sabit durur, kaydırma ile hareket etmez */
+    z-index: 1000; /* En üstte görünmesini sağlar */
+    padding-top: 50px; /* Resmin üstten boşluğu */
+    left: 0;
+    top: 0;
+    width: 100%; /* Tam genişlik */
+    height: 100%; /* Tam yükseklik */
+    overflow: auto; /* Resim çok büyükse kaydırma çubuğu çıkar */
+    background-color: rgb(0,0,0); /* Siyah arka plan */
+    background-color: rgba(0,0,0,0.9); /* Yarı saydam siyah arka plan */
+}
+
+/* --- Büyütülmüş Resim Stili --- */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px; 
+    max-height: 80vh;
+    object-fit: contain; 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* Açılış Animasyonu (Zoom Efekti) */
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* --- Başlık (Caption) Stili --- */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* --- Kapatma Butonu (X) Stili --- */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
