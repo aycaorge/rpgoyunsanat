@@ -20,6 +20,9 @@
     position:relative;
     justify-content: space-between;
 }
+#leftim{
+    opacity: 1;
+}
 #navbar{
     background-image: url(carousel.jpg);
     background-size: cover;
@@ -35,13 +38,33 @@
     position:relative;
     justify-content: space-between;
 }
-#convop{
+#convop {
     background-color: lightcoral;
-    background-size: contain;
+
     display: flex;
-    padding: 10px;
-    position:relative;
+    padding: 20px;
+    position: relative;
     justify-content: center;
+    
+
+    max-width: 400px;
+    margin: 50px auto; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    color: white;
+}
+#convop .speaker-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 5px;
+}
+
+#convop .dialog-text {
+    margin: 0;
+    line-height: 1.5;
 }
 #galery{
     display: flex;
@@ -120,36 +143,35 @@
     gap: 10px;
 }
 
-/* Küçük resimlerin stili */
+
 .myImg {
     border-radius: 5px;
-    cursor: pointer; /* Tıklanabilir olduğunu gösteren el işareti */
+    cursor: pointer;
     transition: 0.3s;
-    width: 400px; /* Örnek genişlik */
+    width: 400px; 
     height: auto;
     opacity: 0.3;
 }
 
 .myImg:hover {
-    opacity: 0.5; /* Üzerine gelince hafif şeffaflaşma efekti */
+    opacity: 0.5;
 }
 
-/* --- Modal (Arka Plan) Stilleri --- */
+
 .modal {
-    display: none; /* Başlangıçta gizli */
-    position: fixed; /* Sayfada sabit durur, kaydırma ile hareket etmez */
-    z-index: 1000; /* En üstte görünmesini sağlar */
-    padding-top: 50px; /* Resmin üstten boşluğu */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 50px;
     left: 0;
     top: 0;
-    width: 100%; /* Tam genişlik */
-    height: 100%; /* Tam yükseklik */
-    overflow: auto; /* Resim çok büyükse kaydırma çubuğu çıkar */
-    background-color: rgb(0,0,0); /* Siyah arka plan */
-    background-color: rgba(0,0,0,0.9); /* Yarı saydam siyah arka plan */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
 }
 
-/* --- Büyütülmüş Resim Stili --- */
 .modal-content {
     margin: auto;
     display: block;
@@ -161,13 +183,12 @@
     animation-duration: 0.6s;
 }
 
-/* Açılış Animasyonu (Zoom Efekti) */
+
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
 
-/* --- Başlık (Caption) Stili --- */
 #caption {
     margin: auto;
     display: block;
@@ -179,7 +200,6 @@
     height: 150px;
 }
 
-/* --- Kapatma Butonu (X) Stili --- */
 .close {
     position: absolute;
     top: 15px;
@@ -201,4 +221,75 @@
     .modal-content {
         width: 100%;
     }
+}
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+#comment-form input[type="text"],
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+#comment-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#comment-form button:hover {
+    background-color: #218838;
+}
+
+.comment {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment-date {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.comment-body {
+    margin-top: 5px;
+    line-height: 1.5;
+    white-space: pre-wrap; 
 }
