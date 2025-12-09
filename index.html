@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OOOOOOOO</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <script src="main.js"></script>
+        <audio id="myAudio" src="carousel-ride-30072.mp3"   autoplay loop></audio>
+        <audio id="myAudio1" src="chest-opening-87569.mp3"></audio>
+<button id="playButton">Müziği Başlat</button>
+        <nav id="menu" style="background-color: bisque;justify-content: center;">
+            <a href="#" id="aboutus"><img src="menunormal.png" id="menuimage" onmouseenter="menuhov()" onmouseleave="menuexit()" width="700" height="300" alt=""></a>
+        </nav>
+        <nav id="navbar">
+            <a href="pg1.html"><img src="bunnynormal.png" width="400" height="500" class="animation1"></a>
+            <a href="pg2.html"><img src="horsenormal.png" width="400" height="500" class="animation2"></a>
+            <a href="pg3.html"><img src="bebito.PNG" width="400" height="500" class="animation3"></a>
+        </nav>
+        <center>
+        <div class="image-gallery">
+        <img class="myImg" src="madoka1.jpg" alt="1.Karakter Çizimi">
+        <img class="myImg" src="girl1.jpg" alt="2.Karakter Çizimi">
+        <img class="myImg" src="hari.jpg" alt="3.Karakter Çizimi">
+        </div>
+        </center>
+
+        <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+        </div>
+        <form id="comment-form">
+            <h2>Yorumunuzu Ekleyin</h2>
+            <input type="text" id="username" placeholder="Adınız" required>
+            <textarea id="comment-text" placeholder="Yorumunuzu buraya yazın..." required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+
+        <hr>
+
+        <h2>Yorumlar (<span id="comment-count">0</span>)</h2>
+        <div id="comments-container">
+            </div>
+
+    </body>
+</html>
